@@ -32,9 +32,9 @@
         </div>
         <div class="nav_header">
             <ul>
-                <li><a id="dadi" class="active">GIOCO DEI DADI</a></li>
+                <li class="active"><a id="dadi">GIOCO DEI DADI</a></li>
                 <li><a id="dadi">PARI O DISPARI</a></li>
-                <li><a id="dadi">C.F.S.</a></li>
+                <li><a id="dadi">CARTA-FORBICE-SASSO</a></li>
                 <li><a id="dadi">TINGO</a></li>
             </ul>
         </div>
@@ -42,7 +42,23 @@
 
     <!-- MAIN -->
     <main>
-        <section></section>
+
+        <!-- Gioco dei dadi -->
+        <section id="dice_game">
+            <h1>Benvenuto nella sala del Gioco dei Dadi</h1>
+            <div class="players_container">
+                <div class="player_box">
+                    <h3>Player 1</h3>
+                    <div id="user_dice" class="dice_box"></div>
+                </div>
+                <div class="player_box">
+                    <h3>CPU</h3>
+                    <div id="cpu_dice" class="dice_box"></div>
+                </div>
+            </div>
+            <a id="play_btn" class="btn btn_play">Gioca</a>
+            <h2 id="message"></h2>
+        </section>
     </main>
 
     <!-- FOOTER -->
