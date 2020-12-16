@@ -8,15 +8,15 @@ var playerNumber, cpuNumber, risultato;
 playerNumber = Math.floor(Math.random() * 6) + 1;
 console.log(playerNumber);
 
-// NUmero casuale generato dal computer
+// Numero casuale generato dal computer
 cpuNumber = Math.floor(Math.random() * 6) + 1;
 console.log(cpuNumber);
 
-
+// Condizione per stabilire l'esito della partita
 if (playerNumber > cpuNumber) {
-    risultato = console.log('Hai vinto!');
+    console.log('Hai vinto!');
 } else if (playerNumber < cpuNumber) {
-    risultato = console.log('Hai perso!');
+    console.log('Hai perso!');
 } else {
-    risultato = console.log('Parità!');
+    console.log('Parità!');
 }
