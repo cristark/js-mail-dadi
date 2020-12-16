@@ -124,7 +124,8 @@ console.log('--------------');
 var rspArr = ['carta', 'forbice', 'sasso'];
 
 // Creazione prompt per decisione segno UTENTE
-var rspUserChoice = prompt('Scegli tra carta, forbice o sasso');
+//! DECOMMENTARE SOTTO PER FAR PARTIRE GIOCO
+/* var rspUserChoice = prompt('Scegli tra carta, forbice o sasso');
 console.log(rspUserChoice);
 
 // Assegnazione random segno CPU
@@ -148,7 +149,7 @@ if (rspUserChoice == 'carta' && rspCpuChoice == 'forbice') {
     rspResult = rspArr[0];
 }   else if (rspUserChoice == 'sasso' && rspCpuChoice == 'forbice') {
     rspResult = rspArr[2];
-}   else /* (rspUserChoice == rspCpuChoice) */ {
+}   else  {
     rspResult = 'Parità!';
 }
 
@@ -165,4 +166,31 @@ if (rspResult == rspUserChoice) {
     rspMessagge = 'Parità';
 }
 
-console.log(rspMessagge);
+console.log(rspMessagge); */
+
+// | GIOCO TINGO
+console.log('--------------');
+console.log('GIOCO TINGO');
+console.log('--------------');
+
+var tingoNumbers = Math.floor(Math.random() * 10) + 1;
+console.log(tingoNumbers);
+
+var tingoSymbolsArr = ['denari', 'bastoni', 'spade', 'coppe'];
+var tingoSymbolsRandom = Math.floor(Math.random() * 4);
+var tingoSymbols = tingoSymbolsArr[tingoSymbolsRandom];
+console.log(tingoSymbols);
+
+console.log('La carta è il: ' + tingoNumbers + ' a ' + tingoSymbols);
+
+var tingoResultsArr = ['Hai Vinto!', 'Hai perso!'];
+var tingoResultsRandom = Math.floor(Math.random() * 2);
+var tingoResults;
+
+if (tingoNumbers == 2 && tingoSymbols == tingoSymbolsArr[1]) {
+    tingoResults = 'TINGO!!!!'
+} else {
+    tingoResults = tingoResultsArr[tingoResultsRandom];
+}
+
+console.log(tingoResults);
