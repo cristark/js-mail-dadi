@@ -32,10 +32,10 @@
         </div>
         <div class="nav_header">
             <ul>
-                <li class="active"><a id="dadi">GIOCO DEI DADI</a></li>
-                <li><a id="dadi">PARI O DISPARI</a></li>
-                <li><a id="dadi">CARTA-FORBICE-SASSO</a></li>
-                <li><a id="dadi">TINGO</a></li>
+                <li id="dice"><a>GIOCO DEI DADI</a></li>
+                <li id="even_odd" class="active"><a>PARI O DISPARI</a></li>
+                <li id="prs"><a>CARTA-FORBICE-SASSO</a></li>
+                <li id="tingo"><a>TINGO</a></li>
             </ul>
         </div>
     </header>
@@ -43,21 +43,59 @@
     <!-- MAIN -->
     <main>
 
-        <!-- Gioco dei dadi -->
-        <section id="dice_game">
+        <!--| Gioco dei dadi -->
+        <section id="dice_game" class="hidden">
             <h1>Benvenuto nella sala del Gioco dei Dadi</h1>
+
+            <!-- Contenitore Gioco -->
             <div class="players_container">
+
+                <!-- Box Utente -->
                 <div class="player_box">
                     <h3>Player 1</h3>
                     <div id="user_dice" class="dice_box"></div>
                 </div>
+
+                <!-- Box CPU -->
                 <div class="player_box">
                     <h3>CPU</h3>
                     <div id="cpu_dice" class="dice_box"></div>
                 </div>
             </div>
+
+            <!-- Pulsante GIOCA -->
             <a id="play_btn" class="btn btn_play">Gioca</a>
             <h2 id="message"></h2>
+        </section>
+
+        <!--| Gioco Pari o Dispari -->
+        <section id="even_odd_game" class="show">
+            <h1>Benvenuto nella sala del Gioco Pari o Dispari</h1>
+
+            <!-- Contenitore dati Utente -->
+            <div class="user_box">
+                <h3>Player 1</h3>
+
+                <!-- Caselle scelta Utente -->
+                <div class="user_choice">
+                    <select name="" id="option_choice" required>
+                        <option value="pari">Pari</option>
+                        <option value="dispari">Dispari</option>
+                    </select>
+                    <input type="number" name="" id="number_choice" min="0" max="5" required>
+                    <button id="stamp_choice">Via</button>
+                </div>
+                <h2>Hai scelto:</h2>
+
+                <!-- Visualizzatore scelte Utente -->
+                <div class="user_text_choice">
+                    <div id="opt_choice" class="choice_box"></div>
+                    <div id="numb_choice" class="choice_box"></div>
+                </div>
+
+                <!-- Pulsante GIOCA -->
+                <a id="play_btn" class="btn btn_play">Gioca</a>
+            </div>
         </section>
     </main>
 

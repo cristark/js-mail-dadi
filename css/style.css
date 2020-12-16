@@ -28,20 +28,29 @@ h1 {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h2 {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h3 {
   color: #fff;
   text-align: center;
   margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Buttons */
@@ -161,7 +170,7 @@ header {
 
 /* | MAIN */
 
-/* Gioco dei dadi */
+/* -Gioco dei dadi */
 #dice_game {
   height: calc(100vh - 160px);
   background-color: #006633;
@@ -184,7 +193,7 @@ header {
   border-radius: 20px;
   color: #092b3d;
   text-align: center;
-  line-height: 300px;
+  line-height: 280px;
   font-size: 15em;
   font-weight: bold;
 }
@@ -194,4 +203,62 @@ header {
   width: 150px;
   display: flex;
   justify-content: center;
+}
+
+/* -Gioco Pari o Dispari */
+#even_odd_game {
+  height: calc(100vh - 160px);
+  background-color: #330000;
+  border: 15px solid #2c5774;
+  padding: 30px 0;
+  color: #a29587;
+}
+
+.user_box {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.user_box .user_choice {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user_box .user_choice select,
+.user_box .user_choice input {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 5px solid #0d324d;
+}
+
+.user_box .user_choice button {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  background-color: #092b3d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user_box .user_text_choice {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user_box .user_text_choice .choice_box {
+  width: 250px;
+  height: 50px;
+  background-color: #fff;
+  border: 5px solid #092b3d;
+  border-radius: 10px;
+  color: #092b3d;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
