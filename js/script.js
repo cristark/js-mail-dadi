@@ -3,8 +3,12 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto. */
 
 
 // | GIOCO DEI DADI
+//- Variante con un dado
 // Dichiaro le variabili principali
 var playerNumber, cpuNumber, risultato;
+
+console.log('GIOCO DEI DADI');
+console.log('--------------');
 
 // | FUNZIONE CHE GENERA I DATI CASUALI AL CLICK DEL PULSANTE
 var playButton = document.getElementById("play_btn");
@@ -31,6 +35,34 @@ playButton.addEventListener("click", function() {
     document.getElementById('message').innerHTML = result;
 });
 
+// -Variante con due dadi
+// Calcolo valori casuali relativi ai due dadi dell'UTENTE e li sommo in una var
+var userFirstDice = Math.floor(Math.random() * 6) + 1;
+var userSecondDice = Math.floor(Math.random() * 6) + 1;
+var userDiceResult = userFirstDice + userSecondDice;
+console.log('La somma dei dadi dell\'UTENTE è: ' + userDiceResult);
+
+// Calcolo valori casuali relativi ai due dadi del CPU e li sommo in una var
+var cpuFirstDice = Math.floor(Math.random() * 6) + 1;
+var cpuSecondDice = Math.floor(Math.random() * 6) + 1;
+var cpuDiceResult = cpuFirstDice + cpuSecondDice;
+console.log('La somma dei dadi del CPU è: ' + cpuDiceResult);
+
+// Dichiaro variabile risultato finale
+var finalDiceResult = 'Parità! Tenta nuovamente la fortuna!';
+
+// Condizione per stabilire l'esito della partita
+if (userDiceResult > cpuDiceResult) {
+    finalDiceResult = 'Congratulazioni! Hai vinto!';
+} else if (userDiceResult < cpuDiceResult) {
+    finalDiceResult = 'Hai perso, prova di nuovo!';
+}
+
+console.log(finalDiceResult);
+
+console.log('--------------');
+console.log('GIOCO PARI O DISPARI');
+console.log('--------------');
 
 // | GIOCO PARI O DISPARI
 var firstChoice = document.getElementById('option_choice').value;
@@ -82,3 +114,8 @@ if (choiceResult == firstChoice) {
 }   else {
     console.log('Hai perso');
 }
+
+// | GIOCO CARTA FORBICE SASSO
+console.log('--------------');
+console.log('GIOCO CARTA, FORBICE, SASSO');
+console.log('--------------');
