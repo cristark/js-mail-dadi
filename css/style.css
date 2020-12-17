@@ -138,6 +138,13 @@ header {
   border-left: 1px solid #fff;
 }
 
+.nav_header ul li:last-child::after {
+  content: url(../img/desktop-new.svg);
+  position: absolute;
+  top: -12px;
+  right: 60px;
+}
+
 .nav_header ul li:hover {
   background-color: #2c5774;
 }
@@ -187,13 +194,13 @@ header {
 
 .players_container .player_box .dice_box {
   width: 250px;
-  height: 300px;
+  height: 250px;
   background-color: #fff;
   border: 10px solid #092b3d;
   border-radius: 20px;
   color: #092b3d;
   text-align: center;
-  line-height: 280px;
+  line-height: 230px;
   font-size: 15em;
   font-weight: bold;
 }
@@ -261,4 +268,11 @@ header {
   line-height: 40px;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+#even_odd_game a {
+  margin: 20px auto;
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }

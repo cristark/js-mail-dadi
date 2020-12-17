@@ -65,14 +65,14 @@ console.log('GIOCO PARI O DISPARI');
 console.log('--------------');
 
 // | GIOCO PARI O DISPARI
-var firstChoice = document.getElementById('option_choice').value;
-console.log('UTENTE SCEGLIE: ' + firstChoice);
-var secondChoice = document.getElementById('number_choice').value;
-console.log('UTENTE SCEGLIE: ' + secondChoice);
+var firstChoice, secondChoice;
 
 //Stampo le scelte dell'utente all'interno del gioco
 var playButton = document.getElementById("stamp_choice");
 playButton.addEventListener("click", function() {
+
+    firstChoice = document.getElementById('option_choice').value;
+    secondChoice = document.getElementById('number_choice').value;
 
     document.getElementById('opt_choice').innerHTML = firstChoice;
     document.getElementById('numb_choice').innerHTML = secondChoice;
@@ -194,3 +194,24 @@ if (tingoNumbers == 2 && tingoSymbols == tingoSymbolsArr[1]) {
 }
 
 console.log(tingoResults);
+
+// | Funzioni per mostrare i dettagli del biglietto al click del pulsante
+//Gioco dei dadi
+document.getElementById("dice").addEventListener("click", function() {
+
+    document.getElementById('dice_game').className = 'show';
+    document.getElementById('even_odd_game').className = 'hidden';
+    document.getElementById('dice').className = 'active';
+    document.getElementById('even_odd').className = '';
+
+});
+
+//Gioco pari o dispari
+document.getElementById("even_odd").addEventListener("click", function() {
+
+    document.getElementById('dice_game').className = 'hidden';
+    document.getElementById('even_odd_game').className = 'show';
+    document.getElementById('dice').className = '';
+    document.getElementById('even_odd').className = 'active';
+
+});

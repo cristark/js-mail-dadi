@@ -33,7 +33,7 @@
         <div class="nav_header">
             <ul>
                 <li id="dice"><a>GIOCO DEI DADI</a></li>
-                <li id="even_odd" class="active"><a>PARI O DISPARI</a></li>
+                <li id="even_odd"><a>PARI O DISPARI</a></li>
                 <li id="prs"><a>CARTA-FORBICE-SASSO</a></li>
                 <li id="tingo"><a>TINGO</a></li>
             </ul>
@@ -44,7 +44,7 @@
     <main>
 
         <!--| Gioco dei dadi -->
-        <section id="dice_game" class="show">
+        <section id="dice_game" class="hidden">
             <h1>Benvenuto nella sala del Gioco dei Dadi</h1>
 
             <!-- Contenitore Gioco -->
@@ -69,7 +69,7 @@
         </section>
 
         <!--| Gioco Pari o Dispari -->
-        <section id="even_odd_game" class="hidden">
+        <section id="even_odd_game" class="show">
             <h1>Benvenuto nella sala del Gioco Pari o Dispari</h1>
 
             <!-- Contenitore dati Utente -->
@@ -85,12 +85,17 @@
                     <input type="number" name="" id="number_choice" min="0" max="5" required>
                     <button id="stamp_choice">Via</button>
                 </div>
-                <h2>Hai scelto:</h2>
 
                 <!-- Visualizzatore scelte Utente -->
                 <div class="user_text_choice">
-                    <div id="opt_choice" class="choice_box"></div>
-                    <div id="numb_choice" class="choice_box"></div>
+                    <div class="choice_container">
+                        <h2>Dichiari:</h2>
+                        <div id="opt_choice" class="choice_box"></div>
+                    </div>
+                    <div class="choice_container">
+                        <h2>Scegli il numero:</h2>
+                        <div id="numb_choice" class="choice_box"></div>
+                    </div>
                 </div>
 
                 <!-- Pulsante GIOCA -->
